@@ -23,7 +23,7 @@ namespace Malphite
         private static SpellSlot _igniteSlot;
         private static void Main(string[] args)
         {
-            CustomEvents.Game.OnLoad += Game_OnGameLoaded;
+            CustomEvents.Game.OnGameLoad += Game_OnGameLoaded;
         }
 
         private static void Game_OnGameLoaded(EventArgs args)
