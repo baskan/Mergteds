@@ -23,7 +23,7 @@ namespace Malphite
         private static SpellSlot _igniteSlot;
         private static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoaded;
+            CustomEvents.Game.OnLoad += Game_OnGameLoaded;
         }
 
         private static void Game_OnGameLoaded(EventArgs args)
@@ -127,7 +127,7 @@ namespace Malphite
             {
                 Utility.HpBarDamageIndicator.Enabled = eventArgs.GetNewValue<bool>();
             };
-            Game.OnGameUpdate += Game_OnGameUpdate;
+            Game.OnUpdate += Game_OnGameUpdate;
             Drawing.OnDraw += Drawing_OnDraw;
             Interrupter2.OnInterruptableTarget += Interrupter2_OnInterruptableTarget;
         }
